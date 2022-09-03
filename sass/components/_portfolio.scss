@@ -1,0 +1,80 @@
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product__card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+        &:hover,
+        &:focus {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+}
+
+// .portfolio-card-link:hover,
+// .portfolio-card-link:focus {
+//     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+// }
+
+.product__card:hover .portfolio__overlay,
+.product__card:focus .portfolio__overlay {
+    transform: translateY(0);
+}
+
+.product__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+// projects
+
+.product__name {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: #212121;
+    line-height: 2;
+    margin-bottom: 4px;
+}
+
+.product__position {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    line-height: 1.9;
+}
+
+.product__img {
+    display: block;
+}
+
+// portfolio_overlay
+
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms var(--cubic-bezier);
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+}
+
+.portfolio__overlay__text {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+}
+
+.product__information {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border: 1px solid #EEEEEE;
+}
